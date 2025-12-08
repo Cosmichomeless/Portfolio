@@ -1,0 +1,81 @@
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Vertical line for the timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--card-border);
+}
+
+.timelineItem {
+    padding: 2rem;
+    margin-left: 2rem;
+    /* Offset for the line */
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    /* GitHub style box */
+    margin-bottom: 2rem;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+/* Bullet point on the line */
+.timelineItem::before {
+    content: '';
+    position: absolute;
+    left: -2.05rem;
+    /* center on the line */
+    top: 2.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--card-border);
+    border: 2px solid var(--background);
+    transition: background-color 0.3s;
+}
+
+.timelineItem:hover {
+    border-color: var(--cosmic-gold);
+}
+
+.timelineItem:hover::before {
+    background: var(--cosmic-gold);
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #8b949e;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: monospace;
+}
+
+.role {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--primary);
+    /* GitHub Blue for titles */
+}
+
+.company {
+    font-size: 1rem;
+    color: var(--foreground);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: #8b949e;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}

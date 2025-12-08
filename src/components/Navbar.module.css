@@ -1,0 +1,57 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* Cosmic Gold to Purple Gradient */
+    background: linear-gradient(to right, var(--cosmic-gold), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: monospace;
+    /* Tech vibe */
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--foreground);
+    opacity: 0.8;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.link:hover {
+    opacity: 1;
+    color: var(--cosmic-gold);
+    /* Gold hover */
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none;
+    }
+}

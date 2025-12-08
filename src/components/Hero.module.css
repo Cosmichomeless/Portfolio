@@ -1,0 +1,61 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Subtle dark gradient background */
+    background: radial-gradient(circle at center, rgba(88, 166, 255, 0.1) 0%, transparent 70%);
+    padding-top: 70px;
+}
+
+.content {
+    max-width: 800px;
+    animation: fadeIn 1s ease-out;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--foreground);
+}
+
+.highlight {
+    /* Cosmic Gold Gradient based on screenshot */
+    background: linear-gradient(135deg, var(--cosmic-gold) 0%, #f9a03f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(242, 204, 96, 0.3);
+    /* Glow effect */
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #8b949e;
+    /* GitHub inactive text color */
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
