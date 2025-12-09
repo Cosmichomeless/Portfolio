@@ -20,15 +20,37 @@
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    /* Cosmic Gold to Purple Gradient */
-    background: linear-gradient(to right, var(--cosmic-gold), var(--secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: monospace;
-    /* Tech vibe */
+    display: flex;
+    align-items: center;
+    /* Remove text gradient styles if only image is used, or keep for fallback text? 
+       User replaced text with image, so these text styles are likely irrelevant now but harmless. 
+       Let's keep them clean or just override display. */
+    height: 100%;
+    /* Fill container height to center properly */
+    text-decoration: none;
+}
+
+.logoImage {
+    width: 60px;
+    /* 100px is too big for 70px navbar if contained, or pop-out if intent. 
+                   Let's try a balanced 60-70px or keep 80px but centered.
+                   The user said "not so high". 
+                   Ref: User screenshot showed it weirdly positioned.
+                   I will make it fit comfortably: height 60px width 60px? 
+                   User wrote width=100 height=100 in TSX. CSS overrides this.
+                   Let's try 80px and centered. */
+    width: auto;
+    height: 60px;
+    /* Fit within 70px nicely */
+    object-fit: contain;
+    margin-top: 0;
+}
+
+.logoText {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--foreground);
 }
 
 .links {

@@ -1,81 +1,132 @@
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
+    padding-left: 2rem;
 }
 
-/* Vertical line for the timeline */
+/* Vertical Line */
 .timeline::before {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
+    bottom: 0;
     width: 2px;
-    background: var(--card-border);
+    background: linear-gradient(to bottom, var(--cosmic-gold), transparent);
 }
 
 .timelineItem {
-    padding: 2rem;
-    margin-left: 2rem;
-    /* Offset for the line */
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 6px;
-    /* GitHub style box */
-    margin-bottom: 2rem;
     position: relative;
-    transition: border-color 0.2s;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
 }
 
-/* Bullet point on the line */
+/* Remove small dot as we have logos now */
 .timelineItem::before {
-    content: '';
-    position: absolute;
-    left: -2.05rem;
-    /* center on the line */
-    top: 2.5rem;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--card-border);
-    border: 2px solid var(--background);
-    transition: background-color 0.3s;
-}
-
-.timelineItem:hover {
-    border-color: var(--cosmic-gold);
+    display: none;
 }
 
 .timelineItem:hover::before {
     background: var(--cosmic-gold);
+    transform: scale(1.2);
+}
+
+.content {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timelineItem:hover .content {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--cosmic-gold);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.role {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.company {
+    font-size: 1rem;
+    color: var(--cosmic-gold);
+    font-weight: 600;
 }
 
 .date {
     font-size: 0.85rem;
     color: #8b949e;
-    margin-bottom: 0.5rem;
-    display: block;
-    font-family: monospace;
-}
-
-.role {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    color: var(--primary);
-    /* GitHub Blue for titles */
-}
-
-.company {
-    font-size: 1rem;
-    color: var(--foreground);
-    font-weight: 500;
-    margin-bottom: 1rem;
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
 }
 
 .description {
     color: #8b949e;
     line-height: 1.6;
-    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.iconWrapper {
+    position: absolute;
+    /* Center on the line (which is at -2rem relative to item) */
+    /* Icon width is 50px, so half is 25px */
+    left: calc(-2rem - 25px + 1px);
+    /* +1px to align with 2px border center */
+    top: 0;
+    /* Align with top of card */
+    background: #0d1117;
+    /* Dark background to cover line */
+    border: 1px solid var(--cosmic-gold);
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(242, 204, 96, 0.2);
+}
+
+.companyLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .timeline {
+        padding-left: 1rem;
+    }
+
+    .timelineItem {
+        padding-left: 1rem;
+    }
+
+    .iconWrapper {
+        display: none;
+        /* Hide icon on small screens, keep dot */
+    }
+
+    .timelineItem::before {
+        left: -1.35rem;
+        /* Adjust dot position for smaller padding */
+    }
 }

@@ -32,6 +32,8 @@ body {
   overflow-x: hidden;
   font-family: var(--font-sans);
   background-color: var(--background);
+  background-image: radial-gradient(circle at top right, rgba(242, 204, 96, 0.08) 0%, transparent 50%);
+  background-attachment: fixed;
   color: var(--foreground);
   line-height: 1.6;
 }
@@ -54,7 +56,10 @@ a:hover {
 
 /* Utilities */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
   /* Slightly squarer for GitHub feel */
@@ -75,7 +80,7 @@ a:hover {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 .section-title {

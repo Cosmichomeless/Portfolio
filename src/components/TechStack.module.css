@@ -1,0 +1,110 @@
+.section {
+    background-color: var(--background);
+    padding: 6rem 0;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #8b949e;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: var(--cosmic-gold);
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.categoryCard {
+    background: #0d1117;
+    /* Darker than main bg or same? Adjusting for card contrast */
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoryCard:hover {
+    border-color: var(--cosmic-gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+/* Subtle gradient background for cards like in image/theme */
+.categoryCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(242, 204, 96, 0.05), transparent 40%);
+    pointer-events: none;
+}
+
+.categoryTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    color: var(--cosmic-gold);
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 1rem;
+    width: 100%;
+}
+
+.skillItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.skillItem:hover {
+    transform: scale(1.1);
+}
+
+.iconWrapper {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.05));
+}
+
+.skillName {
+    font-size: 0.85rem;
+    color: #c9d1d9;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skillsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

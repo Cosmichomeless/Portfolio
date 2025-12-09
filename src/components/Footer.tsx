@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <p>&copy; {new Date().getFullYear()} David's Portfolio. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} David Rodríguez Díaz. All rights reserved.</p>
         </footer>
     );
 };

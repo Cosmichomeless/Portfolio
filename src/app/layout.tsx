@@ -6,8 +6,8 @@ import Navbar from '@/components/Navbar';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'My Portfolio',
-  description: 'A showcase of my programming projects and skills',
+  title: 'Portfolio',
+  description: 'David Rodriguez Portfolio',
 };
 
 export default function RootLayout({

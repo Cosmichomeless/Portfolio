@@ -1,70 +1,174 @@
+.section {
+    padding: 6rem 0;
+}
+
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
 .card {
-    background: var(--card-bg);
+    background: rgba(22, 27, 34, 0.8);
+    /* Dark Glass */
     border: 1px solid var(--card-border);
-    border-radius: 6px;
+    border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem 0 2rem;
+    /* Top padding for content, 0 bottom because image hangs there */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    min-height: 500px;
+    /* Taller cards */
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(242, 204, 96, 0.15);
+    /* Gold glow */
     border-color: var(--cosmic-gold);
 }
 
-.cardImage {
-    width: 100%;
-    height: 180px;
-    background-color: #21262d;
-    /* Slightly lighter than card bg */
-    position: relative;
-    border-bottom: 1px solid var(--card-border);
+/* Internal Glow Gradient */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top, rgba(242, 204, 96, 0.03), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .cardContent {
-    padding: 1.5rem;
-    flex-grow: 1;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-}
-
-.cardTitle {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-    /* GitHub Blue */
-}
-
-.cardDesc {
-    color: #8b949e;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
+    align-items: center;
     flex-grow: 1;
+    width: 100%;
 }
 
-.tags {
+.cardHeader {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-top: auto;
+    margin-bottom: 1rem;
 }
 
-.tag {
-    background: rgba(56, 139, 253, 0.1);
-    /* Blue tint */
-    color: var(--primary);
-    padding: 0.15rem 0.6rem;
-    border-radius: 2rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    border: 1px solid rgba(56, 139, 253, 0.4);
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--cosmic-gold);
+    transition: color 0.3s;
+}
+
+.card:hover .title {
+    text-shadow: 0 0 20px rgba(242, 204, 96, 0.4);
+}
+
+.description {
+    color: #8b949e;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.imageWrapper {
+    width: 100%;
+    margin-top: auto;
+    /* Push to bottom */
+    position: relative;
+    height: 250px;
+    /* Fixed height for visual consistency */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align bottom */
+}
+
+.projectImage {
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+    max-width: 80%;
+    /* Don't fill edge to edge, look like a "prop" */
+    max-height: 100%;
+}
+
+.card:hover .projectImage {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.linkIcon {
+    color: #8b949e;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.card:hover .linkIcon {
+    color: var(--cosmic-gold);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    z-index: 2;
+    /* Ensure buttons are clickable above anything else */
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btnPrimary {
+    background: var(--cosmic-gold);
+    color: #0d1117;
+    border: 1px solid var(--cosmic-gold);
+}
+
+.btnPrimary:hover {
+    background: #f4d57a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(242, 204, 96, 0.3);
+}
+
+.btnSecondary {
+    background: transparent;
+    color: var(--cosmic-gold);
+    border: 1px solid var(--cosmic-gold);
+}
+
+.btnSecondary:hover {
+    background: rgba(242, 204, 96, 0.1);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
