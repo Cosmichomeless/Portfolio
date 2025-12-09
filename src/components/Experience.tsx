@@ -25,6 +25,13 @@ const experiences = [
         image: "/images/esicB.png"
     },
     {
+        role: "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+        company: "ESIC Business & Marketing School",
+        date: "Sept 2023 - Jun 2025",
+        description: "Ciclo formativo de grado superior enfocado en el desarrollo de software para diferentes plataformas y dispositivos.",
+        image: "/images/esicB.png"
+    },
+    {
         role: "Certificación: Azure Fundamentals",
         company: "Microsoft",
         date: "Abr 2024",
