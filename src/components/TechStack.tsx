@@ -1,5 +1,5 @@
 import styles from './TechStack.module.css';
-import { SiTypescript, SiJavascript, SiPython, SiKotlin, SiSap, SiHtml5, SiCss3, SiReact, SiNextdotjs, SiSpringboot, SiDocker, SiGit, SiMysql, SiExpo } from "react-icons/si";
+import { SiSwift, SiTypescript, SiJavascript, SiPython, SiKotlin, SiSap, SiHtml5, SiCss3, SiNextdotjs, SiSpringboot, SiDocker, SiGit, SiMysql, SiPostgresql } from "react-icons/si";
 import { FaJava, FaDatabase } from "react-icons/fa";
 import { BiCodeAlt, BiBarChart } from "react-icons/bi";
 import { VscAzure } from "react-icons/vsc";
@@ -34,16 +34,8 @@ const TechStack = () => {
                                 <span className={styles.skillName}>JavaScript</span>
                             </div>
                             <div className={styles.skillItem}>
-                                <div className={styles.iconWrapper} style={{ color: '#61DAFB' }}><SiReact /></div>
-                                <span className={styles.skillName}>React</span>
-                            </div>
-                            <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#FFFFFF' }}><SiNextdotjs /></div>
                                 <span className={styles.skillName}>Next.js</span>
-                            </div>
-                            <div className={styles.skillItem}>
-                                <div className={styles.iconWrapper} style={{ color: '#61DAFB' }}><SiExpo /></div>
-                                <span className={styles.skillName}>React Native</span>
                             </div>
                         </div>
                     </div>
@@ -63,6 +55,10 @@ const TechStack = () => {
                             <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#6DB33F' }}><SiSpringboot /></div>
                                 <span className={styles.skillName}>Spring Boot</span>
+                            </div>
+                            <div className={styles.skillItem}>
+                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiPython /></div>
+                                <span className={styles.skillName}>Python</span>
                             </div>
                         </div>
                     </div>
@@ -86,6 +82,10 @@ const TechStack = () => {
                             <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#2496ED' }}><SiDocker /></div>
                                 <span className={styles.skillName}>Docker</span>
+                            </div>
+                            <div className={styles.skillItem}>
+                                <div className={styles.iconWrapper} style={{ color: '#2496ED' }}><SiPostgresql /></div>
+                                <span className={styles.skillName}>PostgreSQL</span>
                             </div>
                         </div>
                     </div>
@@ -118,12 +118,12 @@ const TechStack = () => {
                         <h3 className={styles.categoryTitle}>Aprendiendo</h3>
                         <div className={styles.skillsGrid}>
                             <div className={styles.skillItem}>
-                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiPython /></div>
-                                <span className={styles.skillName}>Python</span>
-                            </div>
-                            <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiTypescript /></div>
                                 <span className={styles.skillName}>TypeScript</span>
+                            </div>
+                            <div className={styles.skillItem}>
+                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiSwift /></div>
+                                <span className={styles.skillName}>Swift</span>
                             </div>
                         </div>
                     </div>

@@ -20,17 +20,12 @@ const projects = [
         linkLabel: "Ver Landing"
     },
     {
-        title: "Próximamente",
-        description: "Herramienta para crear paletas de colores, simular daltonismo y guardar favoritos.",
+        title: "My roadmap Proximamente",
+        description: "Creador de roadmap para proyectos.",
         link: "#",
         image: null,
     },
-    {
-        title: "Próximamente",
-        description: "Paquete NPM para manipulación de color en formatos como CMYK, RGB y HEX.",
-        link: "#",
-        image: null,
-    }
+
 ];
 
 const Projects = () => {
