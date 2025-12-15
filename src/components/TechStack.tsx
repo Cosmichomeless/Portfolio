@@ -1,5 +1,5 @@
 import styles from './TechStack.module.css';
-import { SiSwift, SiTypescript, SiJavascript, SiPython, SiKotlin, SiSap, SiHtml5, SiCss3, SiNextdotjs, SiSpringboot, SiDocker, SiGit, SiMysql, SiPostgresql } from "react-icons/si";
+import { SiGo, SiSwift, SiTypescript, SiJavascript, SiPython, SiKotlin, SiSap, SiHtml5, SiCss3, SiNextdotjs, SiSpringboot, SiDocker, SiGit, SiMysql, SiPostgresql } from "react-icons/si";
 import { FaJava, FaDatabase } from "react-icons/fa";
 import { BiCodeAlt, BiBarChart } from "react-icons/bi";
 import { VscAzure } from "react-icons/vsc";
@@ -72,10 +72,6 @@ const TechStack = () => {
                                 <span className={styles.skillName}>Azure</span>
                             </div>
                             <div className={styles.skillItem}>
-                                <div className={styles.iconWrapper} style={{ color: '#00758F' }}><SiMysql /></div>
-                                <span className={styles.skillName}>SQL</span>
-                            </div>
-                            <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#F2C811' }}><BiBarChart /></div>
                                 <span className={styles.skillName}>Power BI</span>
                             </div>
@@ -107,10 +103,6 @@ const TechStack = () => {
                                 <div className={styles.iconWrapper} style={{ color: '#F05032' }}><SiGit /></div>
                                 <span className={styles.skillName}>Git</span>
                             </div>
-                            <div className={styles.skillItem}>
-                                <div className={styles.iconWrapper} style={{ color: '#FFFFFF' }}><FaDatabase /></div>
-                                <span className={styles.skillName}>Data</span>
-                            </div>
                         </div>
                     </div>
                     {/* Learning */}
@@ -124,6 +116,10 @@ const TechStack = () => {
                             <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiSwift /></div>
                                 <span className={styles.skillName}>Swift</span>
+                            </div>
+                            <div className={styles.skillItem}>
+                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiGo /></div>
+                                <span className={styles.skillName}>Go</span>
                             </div>
                         </div>
                     </div>
