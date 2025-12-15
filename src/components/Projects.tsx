@@ -9,15 +9,14 @@ const projects = [
         description: "Dashboard musical inteligente. Gestiona playlists y descubre música con Spotify + Deezer.",
         link: "https://bf-web-taupe.vercel.app/",
         image: "/images/BeatFinderWeb.png",
-        requestDemo: true, // New flag for the button
-        linkLabel: "Visitar Web"
+        requestDemo: true,
     },
     {
         title: "Beat Finder App",
         description: "App nativa con 'Swipes' estilo Tinder. Backend Spring Boot y algoritmos personalizados.",
         link: "https://landingbf.vercel.app/",
         image: "/images/BeatFinderMobile.png",
-        linkLabel: "Ver Landing"
+        linkLabel: "Web"
     },
     {
         title: "My roadmap Proximamente",
