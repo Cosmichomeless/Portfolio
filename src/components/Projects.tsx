@@ -7,9 +7,9 @@ const projects = [
     {
         title: "Beat Finder Web",
         description: "Dashboard musical inteligente. Gestiona playlists y descubre música con Spotify + Deezer.",
-        link: "https://bf-web-taupe.vercel.app/",
         image: "/images/BeatFinderWeb.png",
         requestDemo: true,
+
     },
     {
         title: "Beat Finder App",
@@ -50,7 +50,7 @@ const Projects = () => {
                             <p className={styles.description}>{project.description}</p>
 
                             <div className={styles.actions}>
-                                {project.link !== "#" && (
+                                {project.link && project.link !== "#" && (
                                     <a
                                         href={project.link}
                                         target="_blank"
