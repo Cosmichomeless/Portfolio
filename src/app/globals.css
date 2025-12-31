@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --background: #0d1117;
   /* GitHub Dark Dim/Dark */

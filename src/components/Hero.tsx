@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Hero.module.css';
-import { FaGithub, FaEnvelope, FaCode, FaLinkedin } from 'react-icons/fa';
+import { SocialIcons } from './ui/social-icons';
 
 const Hero = () => {
     return (
@@ -24,15 +23,7 @@ const Hero = () => {
                     </div>
 
                     <div className={styles.actions}>
-                        <a href="https://github.com/Cosmichomeless" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#333' }} aria-label="GitHub">
-                            <FaGithub />
-                        </a>
-                        <a href="https://www.linkedin.com/in/david-rodr/" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#0077b5' }} aria-label="LinkedIn">
-                            <FaLinkedin />
-                        </a>
-                        <Link href="#contact" className="btn" style={{ background: 'transparent', border: '1px solid var(--card-border)' }} aria-label="Contactar">
-                            <FaEnvelope />
-                        </Link>
+                        <SocialIcons />
                     </div>
                 </div>
 

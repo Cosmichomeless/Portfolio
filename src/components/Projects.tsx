@@ -19,10 +19,11 @@ const projects = [
         linkLabel: "Web"
     },
     {
-        title: "My roadmap Proximamente",
-        description: "Creador de roadmap para proyectos.",
-        link: "#",
-        image: null,
+        title: "Coremap",
+        description: "Herramienta de productividad con IA que transforma metas complejas en mapas de nodos dinámicos.",
+        link: "https://core-map-landing.vercel.app/",
+        image: "/images/coremap.png",
+        linkLabel: "Web"
     },
 
 ];
@@ -43,6 +44,26 @@ const Projects = () => {
                         key={index}
                         className={styles.card}
                     >
+                        <div className={styles.imageWrapper}>
+                            <div className={styles.browserHeader}>
+                                <div className={styles.dot} />
+                                <div className={styles.dot} />
+                                <div className={styles.dot} />
+                            </div>
+                            {project.image ? (
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className={styles.projectImage}
+                                />
+                            ) : (
+                                <div className={styles.placeholder}>
+                                    <span>Próximamente</span>
+                                </div>
+                            )}
+                        </div>
+
                         <div className={styles.cardContent}>
                             <div className={styles.cardHeader}>
                                 <h3 className={styles.title}>{project.title}</h3>
@@ -69,31 +90,6 @@ const Projects = () => {
                                     </a>
                                 )}
                             </div>
-                        </div>
-
-                        <div className={styles.imageWrapper}>
-                            {project.image ? (
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    width={300}
-                                    height={200}
-                                    className={styles.projectImage}
-                                />
-                            ) : (
-                                <div style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    background: 'rgba(255,255,255,0.05)',
-                                    borderRadius: '8px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    color: '#30363d'
-                                }}>
-                                    <span>Próximamente</span>
-                                </div>
-                            )}
                         </div>
                     </div>
                 ))}
