@@ -21,7 +21,7 @@ const projects = [
     {
         title: "Coremap",
         description: "Herramienta de productividad con IA que transforma metas complejas en mapas de nodos dinámicos.",
-        link: "www.coremap.app",
+        link: "https://coremap.app/",
         image: "/images/coremap.png",
         linkLabel: "Web"
     },
