@@ -16,14 +16,14 @@ const projects = [
         description: "App nativa con 'Swipes' estilo Tinder. Backend Spring Boot y algoritmos personalizados.",
         link: "https://landingbf.vercel.app/",
         image: "/images/BeatFinderMobile.png",
-        linkLabel: "Web"
+        linkLabel: "Landing"
     },
     {
         title: "Coremap",
         description: "Herramienta de productividad con IA que transforma metas complejas en mapas de nodos dinámicos.",
         link: "https://coremap.app/",
         image: "/images/coremap.png",
-        linkLabel: "Web"
+        linkLabel: "Landing"
     },
 
 ];
