@@ -37,6 +37,10 @@ const TechStack = () => {
                                 <div className={styles.iconWrapper} style={{ color: '#FFFFFF' }}><SiNextdotjs /></div>
                                 <span className={styles.skillName}>Next.js</span>
                             </div>
+                            <div className={styles.skillItem}>
+                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiTypescript /></div>
+                                <span className={styles.skillName}>TypeScript</span>
+                            </div>
                         </div>
                     </div>
 
@@ -109,10 +113,6 @@ const TechStack = () => {
                     <div className={styles.categoryCard}>
                         <h3 className={styles.categoryTitle}>Aprendiendo</h3>
                         <div className={styles.skillsGrid}>
-                            <div className={styles.skillItem}>
-                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiTypescript /></div>
-                                <span className={styles.skillName}>TypeScript</span>
-                            </div>
                             <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiSwift /></div>
                                 <span className={styles.skillName}>Swift</span>
