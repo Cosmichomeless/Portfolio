@@ -1,5 +1,5 @@
 import styles from './TechStack.module.css';
-import { SiGo, SiSwift, SiTypescript, SiJavascript, SiPython, SiKotlin, SiSap, SiHtml5, SiCss3, SiNextdotjs, SiSpringboot, SiDocker, SiGit, SiMysql, SiPostgresql } from "react-icons/si";
+import { SiGo, SiSwift, SiTypescript, SiJavascript, SiPython, SiKotlin, SiSap, SiHtml5, SiCss3, SiNextdotjs, SiSpringboot, SiDocker, SiGit, SiMysql, SiPostgresql, SiNodedotjs } from "react-icons/si";
 import { FaJava, FaDatabase } from "react-icons/fa";
 import { BiCodeAlt, BiBarChart } from "react-icons/bi";
 import { VscAzure } from "react-icons/vsc";
@@ -63,6 +63,9 @@ const TechStack = () => {
                             <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiPython /></div>
                                 <span className={styles.skillName}>Python</span>
+                            </div> <div className={styles.skillItem}>
+                                <div className={styles.iconWrapper} style={{ color: '#6DB33F' }}><SiNodedotjs /></div>
+                                <span className={styles.skillName}>NodeJS</span>
                             </div>
                         </div>
                     </div>
