@@ -41,6 +41,10 @@ const TechStack = () => {
                                 <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiTypescript /></div>
                                 <span className={styles.skillName}>TypeScript</span>
                             </div>
+                            <div className={styles.skillItem}>
+                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiSwift /></div>
+                                <span className={styles.skillName}>Swift</span>
+                            </div>
                         </div>
                     </div>
 
@@ -66,6 +70,10 @@ const TechStack = () => {
                             </div> <div className={styles.skillItem}>
                                 <div className={styles.iconWrapper} style={{ color: '#6DB33F' }}><SiNodedotjs /></div>
                                 <span className={styles.skillName}>NodeJS</span>
+                            </div>
+                            <div className={styles.skillItem}>
+                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiGo /></div>
+                                <span className={styles.skillName}>Go</span>
                             </div>
                         </div>
                     </div>
@@ -116,14 +124,7 @@ const TechStack = () => {
                     <div className={styles.categoryCard}>
                         <h3 className={styles.categoryTitle}>Aprendiendo</h3>
                         <div className={styles.skillsGrid}>
-                            <div className={styles.skillItem}>
-                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiSwift /></div>
-                                <span className={styles.skillName}>Swift</span>
-                            </div>
-                            <div className={styles.skillItem}>
-                                <div className={styles.iconWrapper} style={{ color: '#3776AB' }}><SiGo /></div>
-                                <span className={styles.skillName}>Go</span>
-                            </div>
+
                         </div>
                     </div>
                 </div>
