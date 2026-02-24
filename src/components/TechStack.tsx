@@ -120,13 +120,6 @@ const TechStack = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Learning */}
-                    <div className={styles.categoryCard}>
-                        <h3 className={styles.categoryTitle}>Aprendiendo</h3>
-                        <div className={styles.skillsGrid}>
-
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
