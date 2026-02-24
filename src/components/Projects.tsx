@@ -10,12 +10,18 @@ type ProjectType = {
     image?: string;
     linkLabel?: string;
     requestDemo?: boolean;
+    type?: string;
+    location?: string;
+    date?: string;
+    tech?: string[];
 };
 
 const projects: ProjectType[] = [
     {
         title: "Coremap",
-        description: "Herramienta de productividad con IA que transforma metas complejas en mapas de nodos dinámicos.",
+        type: "Aplicación Móvil",
+        description: "Aplicación nativa diseñada para la organización de conceptos transversales y generación de rutas de aprendizaje (Roadmaps) mediante IA. Implementación de 'CoreMap Architect' mediante OpenAI para generar arquitecturas de datos complejas (nodos y tiempos) en formato JSON.",
+        tech: ["Swift (SwiftUI)", "Go", "PostgreSQL", "Docker", "Railway", "OpenAI API"],
         link: "https://coremap.app/",
         image: "/images/coremap.png",
         linkLabel: "Landing"
@@ -81,8 +87,23 @@ const Projects = () => {
                             <div className={styles.cardContent}>
                                 <div className={styles.cardHeader}>
                                     <h3 className={styles.title}>{project.title}</h3>
+                                    {(project.type || project.date || project.location) && (
+                                        <div className={styles.projectMeta}>
+                                            {project.type && <span className={styles.projectType}>{project.type}</span>}
+                                            {project.date && <span className={styles.projectDate}>{project.date}</span>}
+                                            {project.location && <span className={styles.projectLocation}> • {project.location}</span>}
+                                        </div>
+                                    )}
                                 </div>
                                 <p className={styles.description}>{project.description}</p>
+
+                                {project.tech && project.tech.length > 0 && (
+                                    <div className={styles.techStack}>
+                                        {project.tech.map((tech, i) => (
+                                            <span key={i} className={styles.techItem}>{tech}</span>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     );
