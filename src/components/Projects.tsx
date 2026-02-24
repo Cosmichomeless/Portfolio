@@ -3,29 +3,23 @@ import Image from 'next/image';
 import styles from './Projects.module.css';
 import { FiExternalLink, FiMail } from 'react-icons/fi';
 
-const projects = [
-    {
-        title: "Beat Finder Web",
-        description: "Dashboard musical inteligente. Gestiona playlists y descubre música con Spotify + Deezer.",
-        image: "/images/BeatFinderWeb.png",
-        requestDemo: true,
+type ProjectType = {
+    title: string;
+    description: string;
+    link?: string;
+    image?: string;
+    linkLabel?: string;
+    requestDemo?: boolean;
+};
 
-    },
-    {
-        title: "Beat Finder App",
-        description: "App nativa con 'Swipes' estilo Tinder. Backend Spring Boot y algoritmos personalizados.",
-        link: "https://landingbf.vercel.app/",
-        image: "/images/BeatFinderMobile.png",
-        linkLabel: "Landing"
-    },
+const projects: ProjectType[] = [
     {
         title: "Coremap",
         description: "Herramienta de productividad con IA que transforma metas complejas en mapas de nodos dinámicos.",
         link: "https://coremap.app/",
         image: "/images/coremap.png",
         linkLabel: "Landing"
-    },
-
+    }
 ];
 
 const Projects = () => {
@@ -39,12 +33,9 @@ const Projects = () => {
             </div>
 
             <div className={styles.grid}>
-                {projects.map((project, index) => (
-                    <div
-                        key={index}
-                        className={styles.card}
-                    >
-                        <div className={styles.imageWrapper}>
+                {projects.map((project, index) => {
+                    const imageContent = (
+                        <>
                             <div className={styles.browserHeader}>
                                 <div className={styles.dot} />
                                 <div className={styles.dot} />
@@ -62,37 +53,40 @@ const Projects = () => {
                                     <span>Próximamente</span>
                                 </div>
                             )}
-                        </div>
+                            {project.link && project.link !== "#" && (
+                                <div className={styles.imageOverlay}>
+                                    <span className={styles.overlayText}>Ver Proyecto</span>
+                                </div>
+                            )}
+                        </>
+                    );
 
-                        <div className={styles.cardContent}>
-                            <div className={styles.cardHeader}>
-                                <h3 className={styles.title}>{project.title}</h3>
-                            </div>
-                            <p className={styles.description}>{project.description}</p>
+                    return (
+                        <div key={index} className={styles.card}>
+                            {project.link && project.link !== "#" ? (
+                                <Link
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.imageWrapper}
+                                >
+                                    {imageContent}
+                                </Link>
+                            ) : (
+                                <div className={styles.imageWrapper}>
+                                    {imageContent}
+                                </div>
+                            )}
 
-                            <div className={styles.actions}>
-                                {project.link && project.link !== "#" && (
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={`${styles.btn} ${styles.btnPrimary}`}
-                                    >
-                                        {project.linkLabel || "Visitar Sitio"} <FiExternalLink />
-                                    </a>
-                                )}
-                                {project.requestDemo && (
-                                    <a
-                                        href="mailto:Drodriguez1703@gmail.com?subject=Solicitud Demo Beat Finder"
-                                        className={`${styles.btn} ${styles.btnSecondary}`}
-                                    >
-                                        Pedir Demo <FiMail />
-                                    </a>
-                                )}
+                            <div className={styles.cardContent}>
+                                <div className={styles.cardHeader}>
+                                    <h3 className={styles.title}>{project.title}</h3>
+                                </div>
+                                <p className={styles.description}>{project.description}</p>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </section>
     );
